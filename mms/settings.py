@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -141,5 +140,5 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static'),
 
 ]
-
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
