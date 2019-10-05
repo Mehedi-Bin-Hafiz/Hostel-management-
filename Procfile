@@ -1,1 +1,1 @@
-web: gunicorn mms.wsgi --log-file
+web: gunicorn mms.wsgi --log-file -
