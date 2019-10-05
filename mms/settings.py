@@ -26,7 +26,7 @@ SECRET_KEY = 'me_v7givykj++t-z-0sx0e#z^#s4rdj4yy_z957npi8gkn=d98'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://quiet-wildwood-33076.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -92,9 +92,9 @@ DATABASES = {
         'NAME': 'db.sqlite3',
     }
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# import dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
