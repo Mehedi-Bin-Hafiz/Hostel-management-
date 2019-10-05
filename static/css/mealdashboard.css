@@ -1,0 +1,32 @@
+input{
+    width: 55px;
+}
+
+.a{
+    margin: auto;
+
+
+}
+
+.lunch{
+    border :1px solid black;
+    padding-right: 17px;
+    padding-left: 17px;
+    margin-left: 15px;
+    border-radius: 2px;
+}
+.dinner{
+    border :1px solid black;
+    padding-right: 17px;
+    padding-left: 17px;
+    margin-left: 15px;
+    border-radius: 2px;
+
+}
+.h{
+    text-align: center;
+    margin: 10px;
+}
+.bsizer{
+    margin-left: 460px;
+}

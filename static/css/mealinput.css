@@ -1,0 +1,25 @@
+input{
+    width: 55px;
+}
+.date{
+    width:150px;
+}
+
+.a{
+    margin: auto;
+
+
+}
+.table{
+    margin-top: 20px;
+}
+
+
+.button-submit{
+    padding: 3px 15px;
+    margin-left: 10px;
+}
+
+h1{
+    margin-top: 50px;
+}

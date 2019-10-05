@@ -1,0 +1,35 @@
+{% load static %}
+
+<html>
+    <head>
+    <title>
+        Profile
+        </title>
+        <link href="{% static '..\static\css\manager.css' %}" type="text/css" rel="stylesheet">
+    </head>
+
+    <body class="mainform">
+     {%  if user.is_authenticated %}
+        <p id="Pro">Profile</p>
+
+        <form action="." method="POST">
+
+            <div id="hi"> Welcome {{ user.username }}</div>
+           <label for="username">Username:<br>{{ user.username }}</label><br><br>
+            <label for="Email">Email:<br>{{ user.email }}</label>
+            <br> <br>
+            <a href="{% url 'index' %}" id="submit" >Home</a>
+            <a href="{% url 'mealdashboard' %}" id="submit" >Meal Dashboard</a>
+            <a href="{% url 'exdash' %}" id="submit" >Expense Dashboards</a>
+            <a href="{% url 'depodash' %}" id="submit" >Deposit & Calculation Dashboard</a>
+            <a href="{% url 'logout' %}" id="submit" >Logout</a>
+
+        </form>
+     {% else %}
+          <button class="btn btn-center" id="mehedi"><p>You are not logged in</p></button><br> <br>
+         <button class="btn btn-center" id="mehedi"><a href="{% url 'login' %}">login</a></button>
+     {% endif %}
+    </body>
+</html>
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="../static/css/ddash.css">
+    <title>Deposit</title>
+</head>
+
+<body>
+
+        <div class="container">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <h1 class="text-center">Deposit & Calculation Dashboard</h1>
+
+                <table class="table">
+                    <thead class="thead-dark table-sm">
+                        <tr>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Deposit</th>
+                            <th class="text-center">Meal Cost</th>
+                            <th class="text-center">Get(+) or Pay(-)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-sm">
+                    {% for Deposit in object_list %}
+                        <tr>
+                            <td class="btn btn-primary btn-lg btn-block">Mehedi</td>
+                            <td><label class="form-control " type="number" placeholder="Deposit amount" name="mdepo" value=0>{{ Deposit.mtotalcost }}</label></td>
+                            <td><label class="form-control " type="number" placeholder="Deposit amount" name="mdepo" value=0>{{ Deposit.mmc }}</label></td>
+                            <td><label class="form-control " type="number" placeholder="Deposit amount" name="mdepo" value=0>{{ Deposit.mgp }}</label></td>
+
+                          </tr>
+                    <tr>
+                            <td class="btn btn-primary btn-lg btn-block"> Omar </td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="odepo" value=0>{{ Deposit.ototalcost }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="odepo" value=0>{{ Deposit.omc }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="odepo" value=0>{{ Deposit.ogp }}</label></td>
+
+                          </tr>
+
+                    <tr>
+
+                            <td class="btn btn-primary btn-lg btn-block">Shafin </td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="sdepo" value=0>{{ Deposit.stotalcost }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="sdepo" value=0>{{ Deposit.smc }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="sdepo" value=0>{{ Deposit.sgp }}</label></td>
+
+                          </tr>
+
+
+                    <tr>
+                            <td class="btn btn-primary btn-lg btn-block"> Biki </td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="bdepo" value=0>{{ Deposit.btotalcost }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="bdepo" value=0>{{ Deposit.bmc }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="bdepo" value=0>{{ Deposit.bgp }}</label></td>
+
+                          </tr>
+
+
+
+                    <tr>
+                            <td class="btn btn-primary btn-lg btn-block"> Nuru </td>
+                        <td><label class="form-control" type="number" placeholder="Deposit amount" name="ndepo" value=0>{{ Deposit.ntotalcost }} </label></td>
+                        <td><label class="form-control" type="number" placeholder="Deposit amount" name="ndepo" value=0>{{ Deposit.nmc }} </label></td>
+                        <td><label class="form-control" type="number" placeholder="Deposit amount" name="ndepo" value=0>{{ Deposit.ngp }} </label></td>
+                          </tr>
+
+                    <tr>
+                            <td class="btn btn-primary btn-lg btn-block"> Abir </td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="adepo" value=0>{{ Deposit.atotalcost }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="adepo" value=0>{{ Deposit.amc }}</label></td>
+                            <td><label class="form-control" type="number" placeholder="Deposit amount" name="adepo" value=0>{{ Deposit.agp }}</label></td>
+
+                    </tr>
+                        <button class="btn btn-danger d-flex justify-content-center bsizer">Meal Rate= {{ Deposit.depomealrate }} Taka</button>
+                        <br>
+                        {{ "<!--" }}
+                    {% endfor %}
+                    </tbody>
+                    </table>
+                </form>
+            </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

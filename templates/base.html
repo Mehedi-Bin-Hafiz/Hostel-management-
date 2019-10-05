@@ -1,0 +1,35 @@
+{% load static%}
+<html>
+<head>
+     <title>
+    {%block title%}
+
+    {%endblock%}
+     </title>
+    {%block csslink%}
+    {%endblock%}
+    <link href="{% static '../static/css/base.css'%}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+    <div class="sticky">
+            <nav>
+                <ul class="navi">
+                    <li><a href="/ " id="home">Home</a>
+                    <li><a href="{% url 'login' %} " id="form" >Login</a></li>
+
+                </ul>
+            </nav>
+        </div>
+</header>
+
+{%block body%}
+
+
+{%endblock%}
+
+</body>
+
+
+</html>

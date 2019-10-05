@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+    <title>
+        Profile
+        </title>
+        <link href="{% static '..\static\css\manager.css' %}" type="text/css" rel="stylesheet">
+    </head>
+    <body class="mainform">
+        <p id="Pro">Profile</p>
+        <form action="." method="POST">
+            <div id="hi"> Welcome OmaR</div>
+           <label for="username">Manager:<br>Md. Omar Faruk </label><br><br>
+            <label for="Email">Email:<br>omarfaruk44336@gmail.com </label>
+            <br> <br>
+            <a href="{% url 'index' %}" id="submit" >Home</a>
+            <a href="{% url 'admin:index' %}" id="submit" >Admin</a>
+            <a href="{% url 'logout' %}" id="submit" >Logout</a>
+            <a href="{% url 'deposit' %}" id="submit" >Deposit</a>
+            <a href="{% url 'mealinput' %}" id="submit" >Meal Input</a>
+            <a href="{% url 'mealdashboard' %}" id="submit" >Meal Dashboard</a>
+            <a href="{% url 'dailyexpense' %}" id="submit" >Expenses</a>
+            <a href="{% url 'exdash' %}" id="submit" >Expense Dashboard</a>
+            <a href="{% url 'depodash' %}" id="submit" >Deposit & Calculation Dashboard</a>
+
+        </form>
+
+    </body>
+
+
+</html>
