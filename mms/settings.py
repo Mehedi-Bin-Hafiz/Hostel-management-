@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
-import django_heroku
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
